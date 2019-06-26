@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SETA - Sistema de Entrega de Trabalhos e Atividades</title>
+        <title>Barber Time 2.0 - Sistema de Gerenciamento de Barbearia</title>
 
         <!-- Bootstrap URL - CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">SETA - Sistema de Entrega de Trabalhos e Atividades</a>
+                    <a class="navbar-brand">Barber Time 2.0 - Sistema de Gerenciamento de Barbearia</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -72,11 +72,11 @@
             </div>
 
             <div class="page-header">
-                <b>&copy;2018
+                <b>&copy;2019
                     &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
-                    Gil Eduardo de Andrade
+                    Luiz Carlos Efigênio
                     &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
-                    versão 3.0
+                    versão 2.0
                 </b>
             </div>
         </div>

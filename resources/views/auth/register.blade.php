@@ -65,16 +65,16 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right">Usuário</label>
-                            <div class="col-md-6">
+                             <div class="col-md-6">
                                 <select id="tipo" name="tipo" class="form-control" required>
                                     <option disabled="true" selected="true"></option>
                                     <option>1 - Aluno</option>
                                     <option>2 - Professor</option>
                                 </select>
-                            </div>
-                        </div>
+                            </div> 
+                        </div> -->
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>

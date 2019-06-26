@@ -38,7 +38,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ url('/') }}">SETA - Sistema de Entrega de Trabalhos e Atividades</a>
+                    <a class="navbar-brand" href="{{ url('/') }}">Barber Time 2.0 - Sistema de Gerenciamento de Barbearia</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" align="right">
                     <ul class="nav navbar-nav" align="right">
@@ -85,11 +85,11 @@
             </div>
 
             <div class="page-header">
-                <b>&copy;2018
+                <b>&copy;2019
                     &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
-                    Gil Eduardo de Andrade
+                    Luiz Carlos Efigênio
                     &nbsp;&nbsp;&raquo;&nbsp;&nbsp;
-                    versão 3.0
+                    versão 2.0
                 </b>
             </div>
         </div>
