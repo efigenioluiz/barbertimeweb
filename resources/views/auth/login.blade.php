@@ -13,10 +13,12 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <div class='col-sm-2' style="text-align: center"> </div>
-
-        <div class='col-sm-8' style="text-align: left">
-
+        <div class='col-sm-1' style="text-align: center"> </div>
+        
+        <div class='col-sm-3' style="text-align: left">
+            <img id="ico" src="{{ url('/img/iconMain.png') }}" >
+        </div>
+        <div class='col-sm-4' style="text-align: right">
             @if ($errors->has('email'))
                 <div class="alert alert-danger">
                     <strong> [Autenticação Inválida] Usuário e Senha Incorretos!</strong>
@@ -28,11 +30,13 @@
                     <strong> [Autenticação Inválida] Usuário e Senha Incorretos!</strong>
                 </div>
             @endif
-
-            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+            <br/>
+            <br/>
+            <br/>
+            <label for="email" class="col-sm-3 col-form-label text-md-right">{{ __('E-Mail') }}</label>
             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
             <br>
-            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
+            <label for="password" class="col-md-3 col-form-label text-md-right">{{ __('Senha') }}</label>
             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
             <br>
 

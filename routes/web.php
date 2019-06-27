@@ -12,28 +12,18 @@
 */
 
 // // Rotas Autenticadas
-// Route::get('/', function () {
-//     return view('main');
-// })->middleware('auth');
-
 Route::get('/', function () {
     return view('main');
-});
+})->middleware('auth');
 
-
-
-// Route::group(['middleware' => 'auth'], function() {
-//     Route::get('/curso', 'CursoController@listar');
-//     Route::get('/turma', 'TurmaController@listar');
-//     Route::get('/aluno', 'AlunoController@listar');
-//     Route::get('/disciplina', 'DisciplinaController@listar');
-//     Route::get('/conceito', 'ConceitoController@listar');
-//     Route::get('/relatorio', 'RelatorioController@listar');
-//     Route::get('/importar', 'ImportarController@listar');
-//     Route::get('/exportar', 'ExportarController@listar');
+// Route::get('/', function () {
+//     return view('main');
 // });
 
-    Route::get('/curso', 'CursoController@listar');
+
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/servico', 'ServicoController@listar');
     Route::get('/turma', 'TurmaController@listar');
     Route::get('/aluno', 'AlunoController@listar');
     Route::get('/disciplina', 'DisciplinaController@listar');
@@ -41,6 +31,16 @@ Route::get('/', function () {
     Route::get('/relatorio', 'RelatorioController@listar');
     Route::get('/importar', 'ImportarController@listar');
     Route::get('/exportar', 'ExportarController@listar');
+});
+
+    // Route::get('/curso', 'CursoController@listar');
+    // Route::get('/turma', 'TurmaController@listar');
+    // Route::get('/aluno', 'AlunoController@listar');
+    // Route::get('/disciplina', 'DisciplinaController@listar');
+    // Route::get('/conceito', 'ConceitoController@listar');
+    // Route::get('/relatorio', 'RelatorioController@listar');
+    // Route::get('/importar', 'ImportarController@listar');
+    // Route::get('/exportar', 'ExportarController@listar');
 
 // Rota Não-Autenticadas
 Auth::routes();

@@ -11,10 +11,10 @@
 <div class='row'>
 
     <div class='col-sm-3' style="text-align: center">
-        <a href="/curso">
-            <img src="{{ url('/img/curso_ico.png') }}">
+        <a href="/servico">
+            <img src="{{ url('/img/navalha.png') }}">
         </a>
-        <h3> Curso </h3>
+        <h3> Serviço<object data="" type=""></object> </h3>
     </div>
 
     <div class='col-sm-3' style="text-align: center">
