@@ -12,7 +12,7 @@
 <h3> SERVIÇOS </h3>
 
 <div class='row'>
-	<form action="{{ action('ServicoController@cadastrar') }}" method="POST">
+	<form action="{{ action('ServicoController@salvar') }}" method="POST">
 		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" >
 		<input type="hidden" name="cadastrar" value="C">	
 		
