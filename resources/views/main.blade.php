@@ -19,12 +19,12 @@
         </div>
     @endif
 
-    <div class='col-sm-3' style="text-align: center">
+    <!-- <div class='col-sm-3' style="text-align: center">
         <a href="/turma">
             <img src="{{ url('/img/turma_ico.png') }}">
         </a>
         <h3> Turma </h3>
-    </div>
+    </div> -->
     <!--
     <div class='col-sm-3' style="text-align: center">
         <a href="/aluno">

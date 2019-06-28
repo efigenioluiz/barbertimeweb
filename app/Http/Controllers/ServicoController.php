@@ -16,13 +16,21 @@ class ServicoController extends Controller
 
     }
         
+    public function cadastrar(){
+
+        //barbeiro ==1 cliente ==0;
+        if (parent::privilegio() == 0) { return view('main'); }
+
+        return view('servicoCadastrar');
+
+    }
     // public function listar() {
     //     // Privilégio
     //     $objServicos = Servico::all();
     //     echo($objServicos);
 
     // }
-    public function cadastrar() {
+    public function salvar() {
         
         if(Request::input('nome')!= null and Request::input('valor') != null ){
             $objServico = new Servico();
@@ -31,9 +39,9 @@ class ServicoController extends Controller
             $objServico->save();
             return view('main');    
         }else{
-            return view('servico');
+            
         }
-
+        return view('servico');
         // $niveis = NivelModel::orderBy('id')->get();
         // return view('cursoCadastrar')->with('niveis', $niveis);
     }

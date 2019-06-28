@@ -8,8 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Barber Time 2.0') }}</title>
-
+    <!-- <title>{{ config('app.name', 'Barber Time 2.0') }}</title> -->
+    <title>Barber Time 2.0</title>
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 

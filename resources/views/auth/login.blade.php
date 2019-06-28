@@ -18,7 +18,7 @@
         <div class='col-sm-3' style="text-align: left">
             <img id="ico" src="{{ url('/img/iconMain.png') }}" >
         </div>
-        <div class='col-sm-4' style="text-align: right">
+        <div class='col-sm-4' style="text-align: left">
             @if ($errors->has('email'))
                 <div class="alert alert-danger">
                     <strong> [Autenticação Inválida] Usuário e Senha Incorretos!</strong>
@@ -47,7 +47,7 @@
             </div> -->
 
             <button type="submit" class="btn btn-primary">
-                {{ __('Efetuar Autenticação') }}
+                {{ __('ENTRAR') }}
             </button>
             <a class="btn btn-link" href="{{ route('password.request') }}">
                 {{ __('Não lembro minha senha!') }}
