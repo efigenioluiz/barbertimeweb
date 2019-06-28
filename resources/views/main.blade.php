@@ -17,7 +17,7 @@
         <h3> Serviço<object data="" type=""></object> </h3>
     </div>
 
-    <div class='col-sm-3' style="text-align: center">
+    <!-- <div class='col-sm-3' style="text-align: center">
         <a href="/turma">
             <img src="{{ url('/img/turma_ico.png') }}">
         </a>
@@ -66,7 +66,7 @@
             <img src="{{ url('/img/exportar_ico.png') }}">
         </a>
         <h3> Exportar </h3>
-    </div>
+    </div> -->
 
 </div>
 

@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/servico', 'ServicoController@listar');
+    Route::post('/cadastrar', 'ServicoController@cadastrar');
+    // Route::get('/listar','ServicoController@listar');
     Route::get('/turma', 'TurmaController@listar');
     Route::get('/aluno', 'AlunoController@listar');
     Route::get('/disciplina', 'DisciplinaController@listar');

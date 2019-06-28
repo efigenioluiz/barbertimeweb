@@ -2,21 +2,35 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request as Request;
+use App\Servico;
 
 class ServicoController extends Controller
 {
-    public function listar() {
-        // Privilégio
+    public function listar(){
         if (parent::privilegio() == 0) { return view('main'); }
 
         return view('servico');
-    }
-    // public function cadastrar() {
 
-    //     $niveis = NivelModel::orderBy('id')->get();
-    //     return view('cursoCadastrar')->with('niveis', $niveis);
+    }
+        
+    // public function listar() {
+    //     // Privilégio
+    //     $objServicos = Servico::all();
+    //     echo($objServicos);
+
     // }
+    public function cadastrar() {
+        
+        $objServico = new Servico();
+        $objServico->nome = Request::input('nome');
+        $objServico->valor = Request::input('valor');
+        $objServico->save();
+        return view('main');
+
+        // $niveis = NivelModel::orderBy('id')->get();
+        // return view('cursoCadastrar')->with('niveis', $niveis);
+    }
 
     // public function editar($id) {
 
