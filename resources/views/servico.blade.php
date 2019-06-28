@@ -14,17 +14,21 @@
 	<form action="{{ action('ServicoController@cadastrar') }}" method="POST">
 		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" >
 		<input type="hidden" name="cadastrar" value="C">	
-		<div class='col-sm-8' style="text-align: center">
+		
+		<div class='col-sm-7' style="text-align: center">
 			<Button  type="submit"  class="btn btn-primary btn-block">
 			<b>Cadastrar Novo Serviço</b>
 			</a>
 		</div>
-		<div class='col-sm-1' style="text-align: center">
+		<div class='col-sm-2' style="text-align: center">
 			<button  type="button" class="btn btn-default btn-block">
 				<span class="glyphicon glyphicon-search"></span>
 			</button>
 		</div>
-		<div class="row">
+		<br>
+		<br>
+		<br>
+		<div class="center"  >
 			<div class="col-sm-4">
 				<label>Nome: </label>
 				<input type="text" name="nome" class="form-control">
@@ -33,7 +37,7 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<label>Valor: </label>
-				<input type="number" name="valor" class="form-control">
+				<input step="0.01" type="number" name="valor" class="form-control">
 				</div>
 		</div>
 	</form>

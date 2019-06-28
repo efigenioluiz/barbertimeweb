@@ -8,6 +8,8 @@ use App\Servico;
 class ServicoController extends Controller
 {
     public function listar(){
+
+        //barbeiro ==1 cliente ==0;
         if (parent::privilegio() == 0) { return view('main'); }
 
         return view('servico');
@@ -22,11 +24,15 @@ class ServicoController extends Controller
     // }
     public function cadastrar() {
         
-        $objServico = new Servico();
-        $objServico->nome = Request::input('nome');
-        $objServico->valor = Request::input('valor');
-        $objServico->save();
-        return view('main');
+        if(Request::input('nome')!= null and Request::input('valor') != null ){
+            $objServico = new Servico();
+            $objServico->nome = Request::input('nome');
+            $objServico->valor = Request::input('valor');
+            $objServico->save();
+            return view('main');    
+        }else{
+            return view('servico');
+        }
 
         // $niveis = NivelModel::orderBy('id')->get();
         // return view('cursoCadastrar')->with('niveis', $niveis);

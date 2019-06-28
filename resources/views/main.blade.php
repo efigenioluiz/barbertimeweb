@@ -10,20 +10,22 @@
 @section('conteudo')
 <div class='row'>
 
-    <div class='col-sm-3' style="text-align: center">
-        <a href="/servico">
-            <img src="{{ url('/img/navalha.png') }}">
-        </a>
-        <h3> Serviço<object data="" type=""></object> </h3>
-    </div>
+    @if (  Auth::user()->id == 1 )
+        <div class='col-sm-3' style="text-align: center">
+            <a href="/servico">
+                <img src="{{ url('/img/navalha.png') }}">
+            </a>
+            <h3> Serviço<object data="" type=""></object> </h3>
+        </div>
+    @endif
 
-    <!-- <div class='col-sm-3' style="text-align: center">
+    <div class='col-sm-3' style="text-align: center">
         <a href="/turma">
             <img src="{{ url('/img/turma_ico.png') }}">
         </a>
         <h3> Turma </h3>
     </div>
-
+    <!--
     <div class='col-sm-3' style="text-align: center">
         <a href="/aluno">
             <img src="{{ url('/img/aluno_ico.png') }}">
