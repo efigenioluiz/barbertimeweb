@@ -10,7 +10,7 @@
 @section('conteudo')
 <div class='row'>
 
-    @if (  Auth::user()->id == 1 )
+    @if (  Auth::user()->type == 1 )
         <div class='col-sm-3' style="text-align: center">
             <a href="/servico">
                 <img src="{{ url('/img/navalha.png') }}">

@@ -39,7 +39,12 @@ class ServicoController extends Controller
             $objServico->save();
             return view('main');    
         }else{
-            
+            //return '<div class="alert alert-danger" role="alert">[ERRO] Campus Inválido!</div>';
+            $msg="Campos Inválidos!, Tente Novamente.";
+            return view('messagebox')->with('tipo', 'alert alert-erro')
+            ->with('titulo', 'OPERAÇÃO INVÁLIDA')
+            ->with('msg', $msg)
+            ->with('acao', "/servico");
         }
         return view('servico');
         // $niveis = NivelModel::orderBy('id')->get();
