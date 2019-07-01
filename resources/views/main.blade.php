@@ -17,6 +17,13 @@
             </a>
             <h3> Serviço<object data="" type=""></object> </h3>
         </div>
+
+        <div class='col-sm-2' style="text-align: center">
+            <a href="/atendimento">
+                <img src="{{ url('/img/agenda.png') }}">
+            </a>
+            <h3> Atendimentos<object data="" type=""></object> </h3>
+        </div>
     @endif
 
     <!-- <div class='col-sm-3' style="text-align: center">

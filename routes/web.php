@@ -33,7 +33,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/servico/confirmar/{id}', 'ServicoController@confirmar');
     //-----------------------------------------------------------------------
 
-
+    //ATENDIMENTOS
+    Route::get('/atendimento', 'ServicoController@listar');
     Route::get('/turma', 'TurmaController@listar');
     Route::get('/aluno', 'AlunoController@listar');
     Route::get('/disciplina', 'DisciplinaController@listar');
