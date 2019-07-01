@@ -11,6 +11,7 @@
 <div class='row'>
 
     @if (  Auth::user()->type == 1 )
+        <h3>Bem Vindo Barbeiro!</h3>
         <div class='col-sm-3' style="text-align: center">
             <a href="/servico">
                 <img src="{{ url('/img/navalha.png') }}">
@@ -24,6 +25,9 @@
             </a>
             <h3> Atendimentos<object data="" type=""></object> </h3>
         </div>
+    @else
+        <h3>Bem Vindo Cliente!</h3>
+    
     @endif
 
     <!-- <div class='col-sm-3' style="text-align: center">

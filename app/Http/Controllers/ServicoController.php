@@ -41,7 +41,7 @@ class ServicoController extends Controller
             $tempoInt= explode('/',Request ::input('tempo') );
             $objServico->tempo=$tempoInt[0]; 
             $objServico->save();
-            return view('main');    
+            return view('servico');    
         }else{
             //return '<div class="alert alert-danger" role="alert">[ERRO] Campus Inválido!</div>';
             $msg="Campos Inválidos!, Tente Novamente.";

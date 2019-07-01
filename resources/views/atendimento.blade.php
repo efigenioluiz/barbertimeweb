@@ -16,5 +16,33 @@
         <label>Data: </label>
         <input type="date" name="data" class="form-control" placeholder="Data">
     </div> 
+    <br/>
+    <!-- On rows -->
+    <br/>
+    <br/>
+    <br/>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr class="table-active" >
+                @for ($i = 1; $i <= 24; $i++)
+                    <th scope="col">{{ $i}}hr</th>
+                @endfor
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            @for ($i = 1; $i <= 24; $i++)
+                <td class="table-primary">--</td>
+            @endfor
+
+        </tbody>
+    </table>
+
+
+
+
+
+
+
 </div>
 @stop
