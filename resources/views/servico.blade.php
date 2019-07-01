@@ -12,52 +12,33 @@
 <h3> SERVIÇOS </h3>
 
 <div class='row'>
-	<form action="{{ action('ServicoController@salvar') }}" method="POST">
-		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" >
-		<input type="hidden" name="cadastrar" value="C">	
-		
-		<div class='col-sm-7' style="text-align: center">
+	<form action='{{ action("ServicoController@listarPrincipal") }}' method="GET">
+		<div class='col-sm-4' style="text-align: center">
 			<Button  type="submit"  class="btn btn-primary btn-block">
-			<b>Cadastrar Novo Serviço</b>
-			</a>
+		<b>Cadastrar Serviço</b>
 		</div>
-		<div class='col-sm-2' style="text-align: center">
-			<button  type="button" class="btn btn-default btn-block">
-				<span class="glyphicon glyphicon-search"></span>
-			</button>
-		</div>
-		<br>
-		<br>
-		<br>
-		<div class="center"  >
-			<div class="col-sm-4">
-				<label>Nome: </label>
-				<input type="text" name="nome" class="form-control">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<label>Valor: </label>
-				<input step="0.01" type="number" name="valor" class="form-control">
-				</div> 
-		 </div>
 	</form>
-	 <br> 
-	<!-- <table class='table table-striped'>
-   	<thead>
+	<table class='table table-striped'>
+    <thead>
         <tr>
             <th>ID</th>
             <th>SERVIÇO</th>
             <th>VALOR</th>
-            <th>TEMPO DE SERVIÇO</th>
         </tr>
     </thead>
     <tbody>
-	 <tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td> 
-	 </tr> -->
+    @foreach ($servico as $dados)
+        <tr>
+            <td>{{ $dados->id }}</td>
+            <td>{{ $dados->nome }}</td>
+            <td>{{ $dados->valor }}</td>
+			<td>
+                <a href="{{ action('ServicoController@editar') }}"><span class='glyphicon glyphicon-pencil'></span></a>
+                &nbsp;
+                <a href="{{ action('ServicoController@remover') }}"><span class='glyphicon glyphicon-remove'></span></a>
+            </td>
+    @endforeach
+    </tbody>
+</table>
 </div>  
 @stop

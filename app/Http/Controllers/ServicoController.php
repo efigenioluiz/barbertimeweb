@@ -12,7 +12,17 @@ class ServicoController extends Controller
         //barbeiro ==1 cliente ==0;
         if (parent::privilegio() == 0) { return view('main'); }
 
-        return view('servico');
+        $servico = Servico::all();
+        return view('servico')->with('servico', $servico);
+        //return view('servico');
+
+    }
+    public function listarPrincipal(){
+
+        //barbeiro ==1 cliente ==0;
+        if (parent::privilegio() == 0) { return view('main'); }
+
+        return view('servicoCadastrar');
 
     }
         
@@ -24,12 +34,6 @@ class ServicoController extends Controller
         return view('servicoCadastrar');
 
     }
-    // public function listar() {
-    //     // Privilégio
-    //     $objServicos = Servico::all();
-    //     echo($objServicos);
-
-    // }
     public function salvar() {
         
         if(Request::input('nome')!= null and Request::input('valor') != null ){
@@ -41,16 +45,23 @@ class ServicoController extends Controller
         }else{
             //return '<div class="alert alert-danger" role="alert">[ERRO] Campus Inválido!</div>';
             $msg="Campos Inválidos!, Tente Novamente.";
-            return view('messagebox')->with('tipo', 'alert alert-erro')
+            return view('messagebox')->with('tipo', 'alert alert-warning')
             ->with('titulo', 'OPERAÇÃO INVÁLIDA')
             ->with('msg', $msg)
-            ->with('acao', "/servico");
+            ->with('acao', "/servico/cadastrar");
         }
         return view('servico');
         // $niveis = NivelModel::orderBy('id')->get();
         // return view('cursoCadastrar')->with('niveis', $niveis);
     }
 
+    public function editar(){
+        return view('main');
+    }
+
+    public function remover(){
+        return view('main');
+    }
     // public function editar($id) {
 
     //     // Filtra parâmetro para garantir que é um número

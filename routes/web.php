@@ -23,14 +23,16 @@ Route::get('/', function () {
 
 
 Route::group(['middleware' => 'auth'], function() {
+
+    //SERVICOS
     Route::get('/servico', 'ServicoController@listar');
+    Route::get('/servico/cadastrar', 'ServicoController@listarPrincipal');
+    Route::post('/servico/salvar', 'ServicoController@salvar');
+    Route::get('/servico/editar', 'ServicoController@editar');
+    Route::get('/servico/deletar', 'ServicoController@remover');
+    //-----------------------------------------------------------------------
 
-    // Route::get('/servico/cadastrar', 'ServicoController@cadastrar'); 
-    
-    Route::post('/servico', 'ServicoController@salvar');
-   
 
-    // Route::get('/listar','ServicoController@listar');
     Route::get('/turma', 'TurmaController@listar');
     Route::get('/aluno', 'AlunoController@listar');
     Route::get('/disciplina', 'DisciplinaController@listar');
