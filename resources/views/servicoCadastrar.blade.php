@@ -10,13 +10,12 @@
 
             var val = parseInt($("#it_tempo").val());
 
-            if(val < 6) {
+            if(val < 12) {
                 val = val + 1;
             }
 
             $("#it_tempo").attr('value', val);
 
-             // $("#div_cmd").load('rotinas/setTimeMonitoring.php', {dados:parseInt(val)}, ready());
         });
 
         // Botão Menos Tempo do Curso
@@ -30,10 +29,10 @@
 
             $("#it_tempo").attr('value', val);
 
-            // $("#div_cmd").load('rotinas/setTimeMonitoring.php', {dados:parseInt(val)}, ready());
         });
     });
 </script>
+@stop
 
 @section('cabecalho')
 <div id="m_texto">
@@ -50,15 +49,7 @@
 	<form action="{{ action('ServicoController@salvar') }}" method="POST">
 		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" >
 		<input type="hidden" name="cadastrar" value="C">	
-		
-		<div class='col-sm-4' style="text-align: center">
-			<Button  type="submit"  class="btn btn-primary btn-block">
-			<b>Cadastrar Novo Serviço</b>
-			</a>
-		</div>
-		<br>
-		<br>
-		<br>
+	
 		<div class="center"  >
 			<div class="col-sm-4">
 				<label>Nome: </label>
@@ -78,7 +69,7 @@
 						<span class="glyphicon glyphicon-minus"></span>
 					</button>
 				</span>
-				<input type="text" class="form-control text-center" name="tempo" id="it_tempo" readonly="true" value="3">
+				<input type="text" class="form-control text-center" name="tempo" id="it_tempo" readonly="true" value="1">
 				<span class="input-group-btn">
 					<button type="button" class="btn btn-default" data-dir="up" id="bt_mais">
 						<span class="glyphicon glyphicon-plus"></span>
@@ -87,7 +78,13 @@
 			</div>
         </div>
 		</div>
-
+		<br>
+		<br>
+		<div class='col-sm-4' style="text-align: center">
+			<Button  type="submit"  class="btn btn-success btn-block">
+			<b>Cadastrar Novo Serviço</b>
+			</a>
+		</div>
 	</form>
 	 <br> 
 </div>  

@@ -17,6 +17,7 @@ class CreateServicosTable extends Migration
             $table->bigIncrements('id');
             $table->String('nome');
             $table->double('valor');
+            $table->integer('tempo');
             $table->timestamps();
         });
     }

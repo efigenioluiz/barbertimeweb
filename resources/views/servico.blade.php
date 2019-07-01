@@ -24,6 +24,7 @@
             <th>ID</th>
             <th>SERVIÇO</th>
             <th>VALOR</th>
+            <th>TEMPO</th>
         </tr>
     </thead>
     <tbody>
@@ -31,7 +32,12 @@
         <tr>
             <td>{{ $dados->id }}</td>
             <td>{{ $dados->nome }}</td>
-            <td>{{ $dados->valor }}</td>
+            <td>R$ {{ $dados->valor }}</td>
+            @if( $dados->tempo > 1)
+            <td>{{ $dados->tempo }} HRs</td>
+            @else
+            <td>{{ $dados->tempo }} HR</td>
+            @endif
 			<td>
                 <a href="{{ action('ServicoController@editar') }}"><span class='glyphicon glyphicon-pencil'></span></a>
                 &nbsp;

@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/servico/cadastrar', 'ServicoController@listarPrincipal');
     Route::post('/servico/salvar', 'ServicoController@salvar');
     Route::get('/servico/editar', 'ServicoController@editar');
-    Route::get('/servico/deletar', 'ServicoController@remover');
+    Route::get('/servico/remover', 'ServicoController@remover');
     //-----------------------------------------------------------------------
 
 

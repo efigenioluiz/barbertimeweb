@@ -40,6 +40,7 @@ class ServicoController extends Controller
             $objServico = new Servico();
             $objServico->nome = Request::input('nome');
             $objServico->valor = Request::input('valor');
+            $objServico->tempo= Request ::input('tempo');
             $objServico->save();
             return view('main');    
         }else{
@@ -59,8 +60,28 @@ class ServicoController extends Controller
         return view('main');
     }
 
-    public function remover(){
-        return view('main');
+    public function remover($id){
+            if(is_numeric($id)) {
+
+             $servico = Servico::find($id);
+
+             if(empty($servico)) {
+                 $msg = "Serviço não encontrado para o ID=$id!";
+
+                return view('messagebox')->with('tipo', 'alert alert-warning')
+                         ->with('titulo', 'OPERAÇÃO INVÁLIDA')
+                         ->with('msg', $msg)
+                         ->with('acao', "/servico");
+             }
+         }else{
+            //$Servico->
+         }
+        $msg = "Parâmetro via URL Inválido!";
+
+        return view('messagebox')->with('tipo', 'alert alert-warning')
+                 ->with('titulo', 'OPERAÇÃO INVÁLIDA')
+                 ->with('msg', $msg)
+                 ->with('acao', "/servico");
     }
     // public function editar($id) {
 
