@@ -33,10 +33,12 @@
             <td>{{ $dados->id }}</td>
             <td>{{ $dados->nome }}</td>
             <td>R$ {{ $dados->valor }}</td>
-            @if( $dados->tempo > 1)
-            <td>{{ $dados->tempo }} HRs</td>
-            @else
-            <td>{{ $dados->tempo }} HR</td>
+            @if( $dados->tempo > 1 && $dados-> tempo != 30)
+                <td>{{ $dados->tempo }} HRs</td>
+            @elseif( $dados-> tempo == 30 )
+                <td>{{ $dados->tempo }} MIN</td>
+            @else($dados-> tempo == 1)
+                <td>{{ $dados->tempo }} HR</td>
             @endif
 			<td>
                 <a href="{{ action('ServicoController@editar') }}"><span class='glyphicon glyphicon-pencil'></span></a>

@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class AtendimentoController extends Controller
 {
-    //
+    public function listar(){
+        return view('atendimento');
+    }
 }
