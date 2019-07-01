@@ -38,7 +38,8 @@ class ServicoController extends Controller
             $objServico = new Servico();
             $objServico->nome = Request::input('nome');
             $objServico->valor = Request::input('valor');
-            $objServico->tempo= Request ::input('tempo');
+            $tempoInt= explode('/',Request ::input('tempo') );
+            $objServico->tempo=$tempoInt[0]; 
             $objServico->save();
             return view('main');    
         }else{

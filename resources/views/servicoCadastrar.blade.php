@@ -18,12 +18,10 @@
 				val=30;
 			}
 
-			if(val== 1){
-				$("#it_tempo").attr('value', val+" Hr");
-			}if(val== 30){
-				$("#it_tempo").attr('value', val+" Min");
+			if(val== 30){
+				$("#it_tempo").attr('value', val+"/Min");
 			}else{
-				$("#it_tempo").attr('value', val+" Hrs");
+				$("#it_tempo").attr('value', val+"/Hrs");
 			}
 			
 
@@ -44,13 +42,11 @@
             }if(val == 30 -1){
 				val=12;
 			}
-
-			if(val== 1){
-				$("#it_tempo").attr('value', val+" Hr");
-			}if(val== 30){
-				$("#it_tempo").attr('value', val+" Min");
+			
+			if(val== 30){
+				$("#it_tempo").attr('value', val+"/Min");
 			}else{
-				$("#it_tempo").attr('value', val+" Hrs");
+				$("#it_tempo").attr('value', val+"/Hrs");
 			}
 
         });
@@ -93,7 +89,7 @@
 						<span class="glyphicon glyphicon-minus"></span>
 					</button>
 				</span>
-				<input type="text" class="form-control text-center" name="tempo" id="it_tempo" readonly="true" value="30 Min">
+				<input type="text" class="form-control text-center" name="tempo" id="it_tempo" readonly="true" value="30/Min">
 				<span class="input-group-btn">
 					<button type="button" class="btn btn-default" data-dir="up" id="bt_mais">
 						<span class="glyphicon glyphicon-plus"></span>
