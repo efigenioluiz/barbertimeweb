@@ -18,13 +18,13 @@
 		<b>Cadastrar Serviço</b>
 		</div>
 	</form>
-	<table class='table table-striped'>
+    <table class="table table-striped table-dark">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>SERVIÇO</th>
-            <th>VALOR</th>
-            <th>TEMPO</th>
+            <th scope="col">ID</th>
+            <th scope="col">SERVIÇO</th>
+            <th scope="col">VALOR</th>
+            <th scope="col">TEMPO</th>
         </tr>
     </thead>
     <tbody>
@@ -41,7 +41,7 @@
 			<td>
                 <a href="{{ action('ServicoController@editar') }}"><span class='glyphicon glyphicon-pencil'></span></a>
                 &nbsp;
-                <a href="{{ action('ServicoController@remover') }}"><span class='glyphicon glyphicon-remove'></span></a>
+                <a href="{{ action('ServicoController@remover', ['id' => $dados->id])  }}"><span class='glyphicon glyphicon-remove'></span></a>
             </td>
     @endforeach
     </tbody>
