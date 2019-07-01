@@ -40,5 +40,10 @@ body {
 }
 #ico{
   width: 300px;
-   height:300px;
+  height:300px;
+}
+#tabela{
+  border: black solid 1px;
+  width:  50px;
+  height: 150px;
 }

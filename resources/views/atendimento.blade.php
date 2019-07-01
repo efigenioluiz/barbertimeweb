@@ -20,21 +20,29 @@
     <!-- On rows -->
     <br/>
     <br/>
-    <br/>
-    <table class="table table-striped table-dark">
+    <table id="tabela" class="table table-striped table-dark">
         <thead>
             <tr class="table-active" >
                 @for ($i = 1; $i <= 24; $i++)
                     <th scope="col">{{ $i}}hr</th>
+                    <th scope="col">30MIN</th>
+                    @if($i ==12)
+                        <tr>
+                        </tr>
+                    @endif
                 @endfor
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="success">
             @for ($i = 1; $i <= 24; $i++)
                 <td class="table-primary">--</td>
+                <td class="table-primary">--</td>
+                @if($i ==12)
+                    <tr>
+                    </tr>
+                @endif
             @endfor
-
         </tbody>
     </table>
 
