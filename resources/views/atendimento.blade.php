@@ -9,6 +9,26 @@
 @stop
 
 @section('conteudo')
+<h1>sadasdadasds</h1>
+@if(!empty($horario))
+    @foreach( $horario as $dados )
+        <h1>{{  $dados->data }} </h1> 
+        <h1>{{  $dados->hora_inicio }} </h1> 
+        <h1>{{  $dados->hora_final }} </h1>
+        <?php
+
+         $horaInicio=explode(":",$dados->hora_inicio);
+         $horaFinal=explode(":",$dados->hora_final);
+        ?>
+        
+    @endforeach
+@else
+    <?php
+        $hora_inicio=0;
+        $hora_final=0;
+    ?>
+    <h1> Nenhum  Horario Liberado para Hoje!</h1>
+@endif
 <div class="row">
     <div class="col-sm-2">
         <label>Data: </label>
@@ -28,12 +48,17 @@
     <div id="quadro">
         <div class="row">
             @for ($i = 7; $i <= 22; $i++)
-                <div id="celula" >
+                <div id="celula" value="{{$i}}" >
                     <div id="hora">{{$i}}</div>
                     <div id="minuto">30</div>
-                    <div id="linha">
-                        <div id ="colTime" ></div>
-                        <div id ="colTime" ></div>
+                    <div id="linha">   
+                    @if( $i >= intval("  $horaInicio[0] ")  && $i < intval("  $horaFinal[0] ") )
+                        <div id ="colTime" style="background-color:green"></div>
+                        <div id ="colTime" style="background-color:green" ></div>
+                    @else
+                            <div id ="colTime" ></div>
+                            <div id ="colTime" ></div>
+                    @endif
                     </div>
                 </div>
             @endfor    

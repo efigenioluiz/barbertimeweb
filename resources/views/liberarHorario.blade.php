@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <label>Horário final: </label>
-                    <input step="00:00" max="23:00" min="01:00" type="time"value="00:00" name="hora_final" class="form-control">
+                    <input step="00:00" max="23:00" min="01:00" type="time"value="07:00" name="hora_final" class="form-control">
                 </div>
             </div>
             <br>
