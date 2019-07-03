@@ -16,7 +16,7 @@ class CreateAtendimentosTable extends Migration
         Schema::create('atendimentos', function (Blueprint $table) {
             $table->bigIncrements('id_atendimento');
             $table->timestamp('data_atendimento');
-            $table->Interger('id_user');
+            $table->integer('id_user');
             $table->timestamps();
         });
     }

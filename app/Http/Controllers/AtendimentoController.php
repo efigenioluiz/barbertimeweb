@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class AtendimentoController extends Controller
 {
     public function listar(){
-        return view('atendimento');
+        $atendimentos=Atendimento::all();
+        return view('atendimento')->with('atendimentos',$atendimentos);
     }
 }

@@ -1,6 +1,6 @@
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: #fff;
 }
 
@@ -42,8 +42,50 @@ body {
   width: 300px;
   height:300px;
 }
-#tabela{
+#celula{
   border: black solid 1px;
-  width:  50px;
-  height: 150px;
+  width:  121px;
+  height: 155px;
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+#hora{
+  width:  120px;
+  height: 24px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+#minuto{
+  height: 15px;
+  overflow: hidden;
+  background: white;
+  font-size: 10px;
+  text-align: center;
+  border-bottom: 1px solid #F4F4F4;
+  color: black;
+}
+#linha{
+  width:  120px;
+  height: 24px;
+  margin-bottom: 3px;
+  border: black solid 1px;
+  background-color: black;
+  color: black;
+  text-align: center;
+}
+#colTime{
+  width: 56px;
+  height: 22px;
+  background-color: grey;
+  display: inline-block;
+}
+
+#quadro{
+  border: black solid 10px;
+  width:  100%;
+  height: 50%px;
+  background-color: white;
+  padding: 4%;
 }
