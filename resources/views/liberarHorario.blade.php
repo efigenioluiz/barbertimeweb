@@ -12,27 +12,27 @@
 <h3> HORÁRIO </h3>
 
 <div class='row'>
-	<form  method="POST">
+	<form action="{{ action('AtendimentoController@salvar')  }}" method="POST">
 		<input type="hidden" name="_token" value="{{{ csrf_token() }}}" >
 		<input type="hidden" name="cadastrar" value="C">	
 	
 		<div class="center"  >
 			<div class="col-sm-4">
-				<label>Date: </label>
+				<label>Data: </label>
 				<input type="date" name="data" class="form-control">
             </div>
             
 		    <div >
                 <div class="col-sm-2">
                     <label>Horário Inicio: </label>
-                    <input step="00:00" type="time" name="hora"value="07:00" class="form-control">
+                    <input step="00:00" type="time" max="23:00" min="01:00" name="hora_inicio"value="07:00" class="form-control">
                 </div>
             </div>
             
             <div class="row">
                 <div class="col-sm-2">
                     <label>Horário final: </label>
-                    <input step="00:00" type="time"value="00:00" name="hora" class="form-control">
+                    <input step="00:00" max="23:00" min="01:00" type="time"value="00:00" name="hora_final" class="form-control">
                 </div>
             </div>
             <br>

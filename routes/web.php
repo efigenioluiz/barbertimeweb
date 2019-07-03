@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth'], function() {
     //ATENDIMENTOS
     Route::get('/atendimento', 'AtendimentoController@listar');
     Route::get('/atendimento/liberar', 'AtendimentoController@liberar');
+    Route::post('/atendimento/salvar', 'AtendimentoController@salvar');
 
 
     //-----------------------------------------------------------------------
@@ -50,14 +51,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/exportar', 'ExportarController@listar');
 });
 
-    // Route::get('/curso', 'CursoController@listar');
-    // Route::get('/turma', 'TurmaController@listar');
-    // Route::get('/aluno', 'AlunoController@listar');
-    // Route::get('/disciplina', 'DisciplinaController@listar');
-    // Route::get('/conceito', 'ConceitoController@listar');
-    // Route::get('/relatorio', 'RelatorioController@listar');
-    // Route::get('/importar', 'ImportarController@listar');
-    // Route::get('/exportar', 'ExportarController@listar');
 
 // Rota Não-Autenticadas
 Auth::routes();
