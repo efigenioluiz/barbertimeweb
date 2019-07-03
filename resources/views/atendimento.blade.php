@@ -14,6 +14,13 @@
         <label>Data: </label>
         <input type="date" name="data" class="form-control" placeholder="Data">
     </div> 
+    <form  action="{{ action('AtendimentoController@liberar') }}" method="GET">
+    <div class='col-sm-2' style="text-align: center">
+			<Button  type="submit"  class="btn btn-primary btn-block">
+			<b>Liberar Horário</b>
+			</a>
+		</div>
+	</form>
     <br/>
     <br/>
     <br/>

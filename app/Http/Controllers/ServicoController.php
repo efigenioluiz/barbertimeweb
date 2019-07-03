@@ -33,7 +33,8 @@ class ServicoController extends Controller
 
     }
     public function salvar() {
-        
+        if (parent::privilegio() == 0) { return view('main'); }
+
         if(Request::input('nome')!= null and Request::input('valor') != null ){
             $objServico = new Servico();
             $objServico->nome = Request::input('nome');
@@ -61,6 +62,8 @@ class ServicoController extends Controller
     }
 
     public function remover($id){
+        if (parent::privilegio() == 0) { return view('main'); }
+
         $servico = Servico::find($id);
         if(is_numeric($id)) {
             if(empty($servico)) {
@@ -76,6 +79,7 @@ class ServicoController extends Controller
     }
 
     public function confirmar($id) {
+        if (parent::privilegio() == 0) { return view('main'); }
 
         $servico = Servico::find($id);
 

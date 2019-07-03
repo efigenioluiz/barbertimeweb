@@ -35,6 +35,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     //ATENDIMENTOS
     Route::get('/atendimento', 'AtendimentoController@listar');
+    Route::get('/atendimento/liberar', 'AtendimentoController@liberar');
 
 
     //-----------------------------------------------------------------------
